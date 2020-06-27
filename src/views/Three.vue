@@ -17,35 +17,33 @@
           :intensity="2"
           :position="{ x: -50, y: -50, z: -50 }"
         ></light>
+        <custom-light
+          :hex="0xefefff"
+          :intensity="2"
+          type="AmbientLight"
+        ></custom-light>
 
-        <div :key="ui.sysKey">
+<RectPrism :color="0xff0000" :width=10 :height=20 :depth=30></RectPrism>
+              <cube texture="cobblestone" :size="1"></cube>
+
+<!--        <div :key="ui.sysKey">
           <movement-system>
             <mass-object
-              :rv0="{ x: 2, y: 2 }"
-              :v0="{ x: 10 }"
-              :f="{ x: -3, y: -2 }"
               :m="1"
             >
               <cube texture="cobblestone" :size="1"></cube>
             </mass-object>
             <mass-object
-              :rv0="{ x: 2, z: 2 }"
-              :v0="{ z: 20 }"
-              :f="{ y: -1, z: -8 }"
               :m="1.2"
             >
               <cube texture="diamond" :size="1.2"></cube>
             </mass-object>
             <movement-object
-              :rv0="{ x: 2, z: 2 }"
-              :v0="{ x: 15, z: -20 }"
-              :a="{ x: -6, y: 0.5, z: 6 }"
             >
               <cube texture="redwool" :size="1.1"></cube>
             </movement-object>
           </movement-system>
-
-          <oimo-world :options="{ gravity: [0, 1, 0] }">
+          <oimo-world :options="{ gravity: [0, 0, 0] }">
             <space-system :m-scale="10 ** 4">
               <space-object v-for="t in textures" :key="t">
                 <oimo-body :options="{ move: true, density: 1 }">
@@ -54,7 +52,7 @@
               </space-object>
             </space-system>
           </oimo-world>
-        </div>
+        </div>-->
       </scene>
     </renderer>
   </div>
@@ -62,9 +60,15 @@
 
 <script>
 import Cube from '@/components/Cube.vue'
+import RectPrism from '@/components/RectPrism.vue'
+import CustomLight from '@/components/CustomLight.vue'
 
 export default {
-  components: { Cube },
+  components: {
+    Cube,
+    RectPrism,
+    CustomLight
+  },
   data() {
     const ui = this.getModel()
     return {
