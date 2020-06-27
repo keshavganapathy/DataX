@@ -51,7 +51,7 @@ function renderData(data, mapping, options) {
 
 }
 
-function rectFromData(data, options) {
+function sphereFromData(data, options) {
 	let [x, y, z, width, height, depth, color] = [0, 0, 0, 10, 10, 10, 0xFFFFFF];
 	{x, y, z, width, height, depth, color} = data;
 
@@ -65,6 +65,23 @@ function rectFromData(data, options) {
 	let lines = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: options.edgeColor || 0x000000 }));
 	lines.position.set(x, y, z);
 	scene.add(lines)
+	
+}
+
+function sphereFromData(data, options) {
+	let [x, y, z, radius, color] = [0, 0, 0, 10, 0xFFFFFF];
+	{x, y, z, radius, color} = data;
+
+	let geometry = new THREE.SphereGeometry(width, height, depth);
+	let material = new THREE.MeshBasicMaterial({ color });
+	let sphere = new THREE.Mesh(geometry, material);
+	sphere.position.set(x, y, z);
+	scene.add(sphere);
+
+	//let edges = new THREE.EdgesGeometry(geometry);
+	//let lines = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: options.edgeColor || 0x000000 }));
+	//lines.position.set(x, y, z);
+	//scene.add(lines)
 	
 }
 
