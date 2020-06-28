@@ -14,5 +14,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3"
-  }
+  },
+  "eslintConfig": {
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "env": {
+      "browser": true
+    }
+}
 }

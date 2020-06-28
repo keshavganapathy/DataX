@@ -6,10 +6,6 @@ const {
 	Quaternion,
 	Vector3
 } = THREE;
-console.log({
-	Quaternion,
-	Vector3
-})
 
 var FlyControls = function ( object, domElement ) {
 
