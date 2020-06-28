@@ -227,6 +227,9 @@ function disposeUI() {
 	}
 }
 
+gui.add({ renderVisualizations }, 'renderVisualizations').name("Render");
+gui.add({ showPopUp }, 'showPopUp').name("New Data");
+
 scene.background = new THREE.Color( 0x333333 );
 let backgroundColor = {Background: "#000000"};
 gui.addColor({Background: "#000000"}, 'Background').onChange(color => {scene.background.set(color)});
@@ -309,11 +312,12 @@ function getColumnNameObj() {
 	return Object.fromEntries(columnNames.map((a,b)=>([a, b])));
 }
 
+let restrictions = {};
+
 function renderVisualizations() {
 	newScene();
 	for (const vis of visualizations) {
 		let mapping = {};
-		let restrictions = {};
 		for (const key in vis) {
 			const item = vis[key];
 			if (key != 'type') {
