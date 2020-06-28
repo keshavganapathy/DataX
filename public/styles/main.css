@@ -15,7 +15,7 @@ body {
 }
 
 .name {
-    margin-top: 20px; 
+    margin-top: 20px;
     margin-left: -20px;
     color: #484848;
     font-size: 40px;
@@ -45,20 +45,20 @@ body {
 
 .file-btn {
     text-align: center;
+    margin-top: 60px;
 }
 
-.file-btn > button {
+.file-btn > a {
     background-color: #A16FFF;
     color: #fff;
     text-decoration: none;
-    margin-top: 40px;
     padding: 10px 38px;
     border-radius: 9px;
     font-size: 24px;
     border: none;
 }
 
-.file-btn > button:hover {
+.file-btn > a:hover {
     text-decoration: none;
     color: #fff;
     transition: .2s;
@@ -86,7 +86,7 @@ body {
         margin-left: 14px;
     }
     .file-btn {
-        padding-top: 20px;
+        margin-top: 50px;
     }
 }
 

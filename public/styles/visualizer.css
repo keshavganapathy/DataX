@@ -1,0 +1,50 @@
+.submit-btn {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #A16FFF;
+    color: #fff;
+    font-size: 20px;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #C3A3FF;
+}
+
+.full-modal {
+    text-align: center;
+} 
+
+.modal-title {
+    font-size: 30px;
+}
+
+.modal-description {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.uploader {
+    margin-left: 190px; 
+    margin-bottom: 14px;
+}
+
+.custom-checkbox {
+    font-weight: 200;
+    color: #555;
+}
+
+@media (max-width: 770px) {
+    .full-modal {
+        text-align: left;
+    }
+    .uploader {
+        margin-left: 0px; 
+    }
+    .submit-btn {
+        text-align: left;
+    }
