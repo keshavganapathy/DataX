@@ -216,7 +216,6 @@ function genGui(columnNames) {
 }
 
 //genGui({'country': 0, 'population': 1, 'infected': 2, 'deaths': 3});
-newGui();
 
 function disposeUI() {
 	while (allControls.length>0) {
@@ -233,6 +232,8 @@ gui.add({ showPopUp }, 'showPopUp').name("New Data");
 scene.background = new THREE.Color( 0x333333 );
 let backgroundColor = {Background: "#000000"};
 gui.addColor({Background: "#000000"}, 'Background').onChange(color => {scene.background.set(color)});
+
+newGui();
 
 function newGui() {
 	disposeUI();
